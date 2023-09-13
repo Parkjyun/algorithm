@@ -63,9 +63,9 @@ public class BOJ1926 {
                         }
                     }
                     if(size > max) max = size;
-             }
-         }
-     }
+                }
+            }
+        }
     }
     static class Point {
         int x;
