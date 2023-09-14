@@ -12,7 +12,7 @@ public class BOJ2178 {
     static int n;
     static int m;
     static int[][] map;
-    static int[][] dist;
+    static int[][] dist;//해당 point까지 도달하기 위한 거리를 저장하는 배열
     static int count = 0;
     static Queue<Point> queue;
     static boolean[][] visited;
@@ -43,17 +43,17 @@ public class BOJ2178 {
     }
 
     static void bfs() {
-        queue.offer(new Point(1, 1));//1을 넣고
+        queue.offer(new Point(1, 1));//첫번째 자리를 넣는다
 
-        while (!queue.isEmpty()) {//q가 비어있지 않다면
-            Point p = queue.poll();//값
-            for (int i = 0; i < 4; i++) {//현재위치 기준 동서남북에서
+        while (!queue.isEmpty()) {//q가 비어있지 않다면 계속한다. 큐가 비었다는 뜻은 값을 빼온후 넣지 못했다 == 갈 길이 없다
+            Point p = queue.poll();//마지막 값을 빼옴
+            for (int i = 0; i < 4; i++) {//현재위치 기준 동서남북으로 가봄
                 int nx = p.x + dX[i];
                 int ny = p.y + dY[i];
                 if (nx < 1 || nx > n || ny < 1 || ny > m) continue;//범위를 빠져나가면 패스
-                if (visited[nx][ny] || map[nx][ny] == 0) continue;
-                visited[nx][ny] = true;
-                dist[nx][ny] = dist[p.x][p.y] + 1;
+                if (visited[nx][ny] || map[nx][ny] == 0) continue;//갔던 곳이나 길이 아니면 패스
+                visited[nx][ny] = true;//갈수 있는 길이면 방문으로 표시후
+                dist[nx][ny] = dist[p.x][p.y] + 1;//그곳까지 도달하기 위한 칸의 수를 갱신
                 queue.offer(new Point(nx, ny));//큐에 넣는다
 
             }
