@@ -3,7 +3,7 @@ package bfs;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-
+//3,2
 public class BOJ1926 {
     static int n;
     static int m;
