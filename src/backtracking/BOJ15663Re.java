@@ -3,6 +3,7 @@ package backtracking;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -32,6 +33,7 @@ public class BOJ15663Re {
             map[i] = Integer.parseInt(st.nextToken());
         }
         Arrays.sort(map);
+
 
         dfs(0, 0);
         System.out.println(sb);
