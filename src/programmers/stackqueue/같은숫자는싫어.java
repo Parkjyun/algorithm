@@ -1,10 +1,5 @@
-package programmers.stack;
+package programmers.stackqueue;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.List;
 import java.util.Stack;
 
 public class 같은숫자는싫어 {
