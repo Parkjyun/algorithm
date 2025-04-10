@@ -19,6 +19,7 @@ public class BOJ2589 {
         // 보물은 육지에서 가장 먼곳 두곳에 존재
         // 보물 사이의 거리는?
         // -> 모든 최단거리간 max값은?
+        // 시간 복잡도 50^4 -> 가능
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
